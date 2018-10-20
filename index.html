@@ -1,6 +1,8 @@
 <html>
 <head>
 
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+
 <style type="text/css">
 
 	#main {
@@ -11,13 +13,14 @@
 	.social_media {
 		display: inline-block;
 		vertical-align: middle;
-		max-width: 90%;
+		min-width: 90%;
 	}
 	
 	.social_media > div {
 		display: inline-block;
-		margin: 2vh 50px;
 		border-radius: 100%;
+		width: 150px;
+		margin: 2vh 50px;
 		cursor: pointer;
 		transition:transform 0.2s;
 		box-shadow:rgba(110,110,110,0.5) 0 0 20px;
@@ -36,6 +39,15 @@
 		display: inline-block;
 		height: 100%;
 		vertical-align: middle;
+	}
+
+	/* margin doesn't collapse on display:block elements. */
+	@media only screen and (max-width: 481px) {
+		.social_media > div {
+			display: block;
+			width: 100px;
+			margin: 4vh auto;
+		}
 	}
 
 </style>
@@ -65,4 +77,5 @@
 </div>
 
 </body>
+
 </html>
