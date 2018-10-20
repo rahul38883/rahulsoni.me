@@ -4,7 +4,7 @@ if [ -f "abcd.txt" ]
 then
 	rm abcd.txt
 else
-	touch abcd.txt
+	echo "content_" > abcd.txt
 fi
 
 gpp
